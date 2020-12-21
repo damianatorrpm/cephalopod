@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.18"/>
-  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">32768</property>
     <property name="step_increment">1</property>
@@ -19,9 +18,7 @@
   </object>
   <object class="GtkListStore" id="big_sizes">
     <columns>
-      <!-- column-name item -->
       <column type="gchararray"/>
-      <!-- column-name int -->
       <column type="gint"/>
     </columns>
     <data>
@@ -77,7 +74,6 @@
   </object>
   <object class="GtkListStore" id="bm_options">
     <columns>
-      <!-- column-name item -->
       <column type="gchararray"/>
     </columns>
     <data>
@@ -2517,7 +2513,6 @@ If unchecked then use Startup Notify only if that is defined for application.</p
   </object>
   <object class="GtkListStore" id="drop_actions">
     <columns>
-      <!-- column-name item -->
       <column type="gchararray"/>
     </columns>
     <data>
@@ -2537,9 +2532,7 @@ If unchecked then use Startup Notify only if that is defined for application.</p
   </object>
   <object class="GtkListStore" id="small_sizes">
     <columns>
-      <!-- column-name item -->
       <column type="gchararray"/>
-      <!-- column-name int -->
       <column type="gint"/>
     </columns>
     <data>
@@ -2591,9 +2584,7 @@ If unchecked then use Startup Notify only if that is defined for application.</p
   </object>
   <object class="GtkListStore" id="thumb_sizes">
     <columns>
-      <!-- column-name item -->
       <column type="gchararray"/>
-      <!-- column-name int -->
       <column type="gint"/>
     </columns>
     <data>
@@ -2637,7 +2628,6 @@ If unchecked then use Startup Notify only if that is defined for application.</p
   </object>
   <object class="GtkListStore" id="view_modes">
     <columns>
-      <!-- column-name title -->
       <column type="gchararray"/>
     </columns>
     <data>

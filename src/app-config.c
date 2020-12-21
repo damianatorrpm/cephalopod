@@ -20,10 +20,6 @@
  *      MA 02110-1301, USA.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include "app-config.h"
 
 #include <libfm/fm-gtk.h>

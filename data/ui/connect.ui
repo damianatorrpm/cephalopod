@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.18"/>
-  <!-- interface-naming-policy project-wide -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="lower">1</property>
     <property name="upper">65535</property>
@@ -299,9 +298,7 @@
   </object>
   <object class="GtkListStore" id="liststore1">
     <columns>
-      <!-- column-name name -->
       <column type="gchararray"/>
-      <!-- column-name scheme -->
       <column type="gchararray"/>
     </columns>
     <data>

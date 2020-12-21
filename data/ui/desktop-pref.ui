@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.18"/>
-  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkDialog" id="dlg">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -753,9 +752,7 @@
   </object>
   <object class="GtkListStore" id="wp_modes">
     <columns>
-      <!-- column-name title -->
       <column type="gchararray"/>
-      <!-- column-name mode -->
       <column type="guint"/>
     </columns>
     <data>

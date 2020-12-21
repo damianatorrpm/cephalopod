@@ -21,10 +21,6 @@
  *      MA 02110-1301, USA.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <stdio.h>
@@ -197,11 +193,9 @@ int main(int argc, char** argv)
     SingleInstData inst;
     GList *l;
 
-#ifdef ENABLE_NLS
     bindtextdomain ( GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR );
     bind_textdomain_codeset ( GETTEXT_PACKAGE, "UTF-8" );
     textdomain ( GETTEXT_PACKAGE );
-#endif
 
     /* initialize GTK+ and parse the command line arguments */
     if(G_UNLIKELY(!gtk_init_with_args(&argc, &argv, " ", opt_entries, GETTEXT_PACKAGE, &err)))
