@@ -73,13 +73,6 @@ AC_SUBST(G_CAST_CHECKS)
 # intltool
 IT_PROG_INTLTOOL([0.40.0])
 
-dnl libgtk version
-AC_ARG_WITH(gtk,
-    [AC_HELP_STRING([--with-gtk=VER],
-        [choose Gtk+ version for libfm-gtk build (default=2)])],
-    [ac_with_gtk="${withval}"],
-    [ac_with_gtk=2])
-
 # Checks for libraries.
 
 PKG_CHECK_MODULES(XLIB, "x11")
@@ -91,15 +84,7 @@ PKG_CHECK_MODULES(GIO, [$gio_modules])
 AC_SUBST(GIO_CFLAGS)
 AC_SUBST(GIO_LIBS)
 
-fm_modules="$gio_modules glib-2.0 pango >= 1.20.0 libfm >= 1.0"
-case "$ac_with_gtk" in
-    3|3.*)
-        fm_modules="$fm_modules gtk+-3.0 libfm-gtk3 >= 1.0.1"
-        ;;
-    *)
-        fm_modules="$fm_modules gtk+-2.0 libfm-gtk >= 1.0.1"
-        ;;
-esac
+fm_modules="$gio_modules glib-2.0 >= 2.28.0 pango >= 1.20.0 libfm >= 1.2.1 gtk+-3.0 >= 3.22.0 libfm-gtk3 >= 1.2.1"
 PKG_CHECK_MODULES(FM, [$fm_modules])
 AC_SUBST(FM_CFLAGS)
 AC_SUBST(FM_LIBS)
