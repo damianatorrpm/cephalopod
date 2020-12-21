@@ -278,14 +278,8 @@ int main(int argc, char** argv)
     {
         first_run = FALSE;
         fm_volume_manager_init();
-#if !GTK_CHECK_VERSION(3, 6, 0)
-        GDK_THREADS_ENTER();
-#endif
         gtk_main();
         /* g_debug("main loop ended"); */
-#if !GTK_CHECK_VERSION(3, 6, 0)
-        GDK_THREADS_LEAVE();
-#endif
 
         if(save_config_idle)
         {
